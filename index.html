@@ -8,7 +8,65 @@
 
 <body>
   <div class="content">
-    <h2>diud</h2>
+    <nav>
+      <div class="nav-container wrapper">
+        <a href="#">
+          <img class="nav-logo" src="app/img/logo.png" alt="Navigation logo">
+        </a>
+        
+        <ul>
+          <li class="active"><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <div class="header-container wrapper">
+        <div class="flex-wrap">
+          <div class="flex-left">
+            <img src="app/img/logo.png" alt="Header logo">
+            <h1>Explained propriety of out perpetual to you</h1>
+            <hr>
+            <p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is.</p>
+            <button>download</button>
+          </div>
+          <div class="flex-right">
+            
+            <form action="#">
+              <div class="form-head">
+                <h2>Try Your <span>FREE</span> Trial Today</h2>
+              </div>
+              <div class="form-content">
+                <h3>Your details</h3>
+                <input type="text" id="fname" name="first-name" placeholder="First name" required>
+                <input type="text" id="lname" name="last-name" placeholder="Last name" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+                <h3>Type of subscription</h3>
+                <div>
+                  <input type="radio" id="monthly" name="subscription" value="monthly"
+                         checked>
+                  <label for="monthly">monthly</label>
+                </div>
+            
+                <div>
+                  <input type="radio" id="yearly" name="subscription" value="yearly">
+                  <label for="yearly">yearly</label>
+                </div>
+
+              </div>
+              <div class="form-submit">
+                <input type="submit" value="GET STARTED">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
   </div>
 </body>
 </html>
