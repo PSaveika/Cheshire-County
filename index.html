@@ -2,71 +2,89 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="app/css/style.css">
   <title>Cheshire County</title>
 </head>
 
 <body>
-  <div class="content">
+  <div class="nav-wrapper">
     <nav>
-      <div class="nav-container wrapper">
-        <a href="#">
-          <img class="nav-logo" src="app/img/logo.png" alt="Navigation logo">
-        </a>
-        
-        <ul>
-          <li class="active"><a href="#">Features</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+      <a href="#">
+        <img class="nav-logo" src="app/img/logo.png" alt="Navigation logo">
+      </a>
+      
+      <ul>
+        <li class="active"><a href="#">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
-
-    <header>
-      <div class="header-container wrapper">
-        <div class="flex-wrap">
-          <div class="flex-left">
-            <img src="app/img/logo.png" alt="Header logo">
-            <h1>Explained propriety of out perpetual to you</h1>
-            <hr>
-            <p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is.</p>
-            <button>download</button>
-          </div>
-          <div class="flex-right">
-            
-            <form action="#">
-              <div class="form-head">
-                <h2>Try Your <span>FREE</span> Trial Today</h2>
-              </div>
-              <div class="form-content">
-                <h3>Your details</h3>
-                <input type="text" id="fname" name="first-name" placeholder="First name" required>
-                <input type="text" id="lname" name="last-name" placeholder="Last name" required>
-                <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
-                <h3>Type of subscription</h3>
-                <div>
-                  <input type="radio" id="monthly" name="subscription" value="monthly"
-                         checked>
-                  <label for="monthly">monthly</label>
-                </div>
-            
-                <div>
-                  <input type="radio" id="yearly" name="subscription" value="yearly">
-                  <label for="yearly">yearly</label>
-                </div>
-
-              </div>
-              <div class="form-submit">
-                <input type="submit" value="GET STARTED">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
-
   </div>
+    
+  <header>
+    <div class="header-container">
+      <div class="flex-left">
+        <img src="app/img/logo.png" alt="Header logo">
+        <h1>Explained propriety<br> of out perpetual to you</h1>
+        <hr>
+        <p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is.</p>
+        <button>download</button>
+      </div>
+      <div class="flex-right">
+        
+        <form action="#">
+          <div class="form-head">
+            <h3>Try Your <span class="text-style">FREE</span> Trial Today</h3>
+          </div>
+          <div class="form-content">
+            <h4>Your details</h4>
+            <input type="text" id="fname" name="first-name" placeholder="First name" required>
+            <input type="text" id="lname" name="last-name" placeholder="Last name" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+            <h4>Type of subscription</h4>
+            <div class="radio-wrapper">
+              <div class="radio-item">
+                <input class="radio-input" type="radio" id="monthly" name="subscription" value="monthly"
+                        checked>
+                <label for="monthly">monthly</label>
+              </div>
+          
+              <div class="radio-item">
+                <input class="radio-input" type="radio" id="yearly" name="subscription" value="yearly">
+                <label for="yearly">yearly</label>
+              </div>
+            </div>
+            
+
+          </div>
+          <div class="form-submit">
+            <input type="submit" value="GET STARTED">
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="socials">
+    <div class="socials-wrap">
+      <div class="socials-text-wrap">
+        <h3>Social Media</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+      </div>
+      <div class="socials-icons">
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-rss"></i></a></li>
+      </div>
+    </div>
+  </section>
+
+
+
 </body>
 </html>
