@@ -13,16 +13,16 @@
 <body>
   <div class="nav-wrapper">
     <nav>
-      <a href="#">
+      <a href="">
         <img class="nav-logo" src="app/img/logo.png" alt="Navigation logo">
       </a>
       
       <ul>
-        <li class="active"><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact-us">Contact</a></li>
+        <li list-el-name="features" class="active"><a href="#features">Features</a></li>
+        <li list-el-name="about"><a href="#about">About</a></li>
+        <li list-el-name="pricing"><a href="#pricing">Pricing</a></li>
+        <li list-el-name="reviews"><a href="#reviews">Reviews</a></li>
+        <li list-el-name="contact-us"><a href="#contact-us">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -88,39 +88,97 @@
   </section>
 
 
-  <main id="features">
+  <main id="features" class="section">
     <div class="main-container">
-      <div class="tabs">
-        <button class="tablink active"><p>register</p></button>
-        <button class="tablink"><p>apply</p></button>
-        <button class="tablink"><p>receive</p></button>
+      <div class="tabs-buttons">
+        <button class="tablink" onclick="changeTab(event, 'register')"><p>register</p></button>
+        <button class="tablink" onclick="changeTab(event, 'apply')"><p>apply</p></button>
+        <button class="tablink" onclick="changeTab(event, 'receive')"><p>receive</p></button>
       </div>
-      <div class="tab-content-wrapper">
-        <div class="tab-text">
-          <h2>
-            Tabs with soft transitioning effect. Explained propriety of out perpetual his you.
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.<br><br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-          </p>
+      <div class="tab-content-wrapper active-tab" id="register">
+        <div class="before"></div>
+        <div class="tab-content">
+          <div class="tab-text">
+            <h2>
+              Tabs with soft transitioning effect. Explained propriety of out perpetual his you.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.<br><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+            </p>
+          </div>
+          <div class="tab-images">
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+          </div>
         </div>
-        <div class="tab-images">
-          <div class="tab-img">
-            <div class="img-mid"><p>Explore</p></div>
+        
+      </div>
+      <!--  -->
+      <div class="tab-content-wrapper" id="apply">
+        <div class="before"></div>
+        <div class="tab-content">
+          <div class="tab-text">
+            <h2>
+              Apply tabs with soft transitioning effect. Explained propriety of out perpetual his you.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.<br><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+            </p>
           </div>
-          <div class="tab-img">
-            <div class="img-mid"><p>Explore</p></div>
-          </div>
-          <div class="tab-img">
-            <div class="img-mid"><p>Explore</p></div>
+          <div class="tab-images">
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
           </div>
         </div>
+        
+      </div>
+      <!--  -->
+      <div class="tab-content-wrapper" id="receive">
+        <div class="before"></div>
+        <div class="tab-content">
+          <div class="tab-text">
+            <h2>
+              Receive tabs with soft transitioning effect. Explained propriety of out perpetual his you.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.<br><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+            </p>
+          </div>
+          <div class="tab-images">
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+            <div class="tab-img">
+              <div class="img-mid"><p>Explore</p></div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </main>
 
-  <section id="about" class="about">
+  <section id="about" class="section about">
     <div class="about-wrap">
       <div class="about-left">
         <div class="about-logo"></div>
@@ -198,7 +256,7 @@
     </div>
   </section>
 
-  <section class="pricing" id="pricing">
+  <section class="pricing section" id="pricing">
     <div class="pricing-wrap">
       <div class="pricing-top">
         <h2>PRICING OPTIONS</h2>
@@ -263,7 +321,7 @@
     </div>
   </section>
 
-  <section id="reviews" class="reviews">
+  <section id="reviews" class="section reviews">
     <div class="reviews-wrap">
       <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
       <hr>
@@ -340,7 +398,7 @@
     </div>
   </section>
 
-  <section id="contact-us" class="contact-us">
+  <section id="contact-us" class="section contact-us">
     <div class="contact-us-wrap">
       <h2>CONTACT US</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

@@ -9,7 +9,6 @@
 }
 
 html, body {
-  height: 100%;
   width: 100%;
   min-width: 300px;
   overflow: auto;
@@ -427,8 +426,9 @@ main {
     position: relative;
     display: flex;
     gap: 54px;
+    overflow: hidden;
 
-    .tabs {
+    .tabs-buttons {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -466,7 +466,7 @@ main {
       }
       
 
-      .active {
+      .active-button {
         background: #E27866;
 
         p {
@@ -475,86 +475,131 @@ main {
       }
     }
 
-    .tab-content-wrapper {
-      display: flex;
-      gap: 70px;
+    .before {
+      width: 0%;
+    }
 
-      .tab-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .before::before {
+        content: "";
+        position: absolute;
+        width: 95%;
+        height: 100%;
+        background: #E2786690;
+        animation: fromTop 1.2s ease forwards ;
+    }
 
-        h2 {
-          max-width: 510px;
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 1.2;
-          margin-bottom: 33px;
-        }
-        
-        p {
-          font-size: 14px;
-        }
+    @keyframes fromTop {
+
+      0% {
+          transform: translateY(-100%);
       }
 
-      .tab-images {
-        height: 100%;
-        width: 370px;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(168px, auto));
-        column-gap: 26px;
-        row-gap: 16px;
+      100% {
+          transform: translateY(120%);
+      }
+      
+    }
 
-        .tab-img {
-          width: 100%;
-          max-height: 168px;
 
-          &:hover .img-mid {
-            background: rgba(226, 120, 102, 0.8);
-          }
-          &:hover .img-mid p {
-            opacity: 1;
-          }
+    .tab-content-wrapper {
+      overflow: hidden;
+      
+      .tab-content {
+        display: flex;
+        gap: 70px;
+        animation: tabReveal 2s ease .9s forwards;
+        transform: translateX(-120%);
 
-          .img-mid {
-            height: 100%;
-            font-size: 20px;
+        .tab-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+  
+          h2 {
+            max-width: 510px;
+            font-size: 36px;
             font-weight: 600;
-            background: rgba(226, 120, 102, 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: .3s;
-
-            p {
-              opacity: 0;
+            line-height: 1.2;
+            margin-bottom: 33px;
+          }
+          
+          p {
+            font-size: 14px;
+          }
+        }
+  
+        .tab-images {
+          height: 100%;
+          width: 370px;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(168px, auto));
+          column-gap: 26px;
+          row-gap: 16px;
+  
+          .tab-img {
+            width: 100%;
+            max-height: 168px;
+  
+            &:hover .img-mid {
+              background: rgba(226, 120, 102, 0.8);
+            }
+            &:hover .img-mid p {
+              opacity: 1;
+            }
+  
+            .img-mid {
+              height: 100%;
+              font-size: 20px;
+              font-weight: 600;
+              background: rgba(226, 120, 102, 0);
+              display: flex;
+              justify-content: center;
+              align-items: center;
               transition: .3s;
+  
+              p {
+                opacity: 0;
+                transition: .3s;
+              }
             }
           }
-        }
-
-        .tab-img:nth-of-type(1) {
-          grid-column: 1/2;
-          background: url("../img/main-img1.png");
-          background-position: center center;
-          background-size: 115%;
-          
-        }
-        .tab-img:nth-of-type(2) {
-          grid-column: 2/3;
-          background: url("../img/main-img2.png");
-          background-position: center center;
-          background-size: 115%;
-        }
-        .tab-img:nth-of-type(3) {
-          max-height: 172px;
-          grid-column: span 2;
-          background: url("../img/main-img3.png");
-          background-position: center center;
-          background-size: 115%;
+  
+          .tab-img:nth-of-type(1) {
+            grid-column: 1/2;
+            background: url("../img/main-img1.png");
+            background-position: center center;
+            background-size: 115%;
+            
+          }
+          .tab-img:nth-of-type(2) {
+            grid-column: 2/3;
+            background: url("../img/main-img2.png");
+            background-position: center center;
+            background-size: 115%;
+          }
+          .tab-img:nth-of-type(3) {
+            max-height: 172px;
+            grid-column: span 2;
+            background: url("../img/main-img3.png");
+            background-position: center center;
+            background-size: 115%;
+          }
         }
       }
+
+      
     }
+
+    @keyframes tabReveal {
+     0% {
+      opacity: 0;
+      transform: translateX(-100%);
+     }
+     100% {
+      opacity: 1;
+      transform: translateX(0%);
+     } 
+    } 
     
   }
 }
