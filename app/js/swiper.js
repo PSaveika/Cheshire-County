@@ -22,7 +22,7 @@ const swiper = new Swiper('.swiper', {
             slidesPerGroup: 1,
         },
 
-        800: {
+        700: {
             slidesPerView: 2,
             slidesPerGroup: 1,
         }
