@@ -13,11 +13,13 @@ for(var tab of tabContent) {
 tabButtons[0].classList.add("active-button");
 tabContent[0].style.display = "flex";
 
+
 function changeTab(event, name) {
     for(var tab of tabContent) {
         tab.style.display = "none";
     }
     document.getElementById(name).style.display = "flex";
+    
 
     for(var button of tabButtons) {
         button.classList.remove("active-button");
@@ -42,7 +44,48 @@ window.addEventListener("scroll", function(){
             navLink.classList.add("active");
         }
     }
+    
+    
 })
 
+const burger = document.querySelector(".burger")
+const burgerList = document.getElementById("list")
+
+burger.addEventListener("click", function(){
+    // this.classList.toggle("rotate")
+    burgerList.classList.toggle("open")
+ })
+
+window.addEventListener("resize", function(){
+    if(window.innerWidth > 768){
+       burger.classList.remove("rotate")
+       burgerList.classList.remove("open")
+    }
+ })
+
+ console.log(burgerList)
+
+// Nav burger 
+
+// function myFunction() {
+//     var x = document.getElementById("list");
+//     console.log(x)
+//     if (x.style.display === "flex") {
+//       x.style.display = "none";
+//     } else {
+//       x.style.display = "flex";
+//     }
+//   } 
 
 
+// function getBurgerValue(burgerListElement, displayValue) {
+//     let burgerListStyle = window.getComputedStyle(burgerListElement);
+//     return burgerListStyle.getPropertyValue(displayValue)
+// }
+
+//dadaryt, kad ant click pasleptu
+// const burgerList = document.getElementById("list")
+//     let value = getBurgerValue(burgerList, "display");
+//     console.log(value);
+
+//     burgerList.style.setProperty("display" , "none")
