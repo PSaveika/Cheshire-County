@@ -1,0 +1,173 @@
+.nav-wrapper {
+    width: 100%;
+    position: fixed;
+    background: $dark-gray;
+    z-index: 10;
+  
+    nav {
+      max-width: 1128px;
+      height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .nav-logo {
+        width: 120px;
+        background: url("../img/logo.png");
+      }
+    
+      ul {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        height: 100%;
+  
+        li {
+          line-height: 72px;
+          position: relative;
+          transition: .3s;
+  
+          a {
+            display: inline-block;
+            height: 100%;
+            color: $white-color;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0px;
+            opacity: 0.69;
+            transition: .25s ease-in-out;
+          }
+  
+          &:after {
+            box-sizing:border-box;
+            position: absolute;
+            transition: .3s;
+            content: '';
+            width: 0%;
+            right: 0;
+            left: auto;
+            bottom: 0;
+            height: 1px;
+            background: $primary-color;
+          }
+  
+          &:hover {
+            cursor: pointer;
+            &:after {
+              width: 100%;
+              left: 0;
+            }
+  
+            a {
+              opacity: 1;
+            }
+          }
+        }
+  
+        .active {
+          position: relative;
+          transition: .3s;
+  
+          &:after {
+            position: absolute;
+            transition: .3s;
+            content: '';
+            width: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            background: $primary-color;
+          }
+  
+          a {
+            opacity: 1;
+          }
+        }
+      } 
+  
+      .burger {
+        display: none;
+      }
+    }
+  } 
+
+// Media Queries
+
+@media (max-width: 1150px ) {
+    
+    nav {
+        @include desktopPadding;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-wrapper {
+        height: 72px;
+
+        nav {
+            width: 100%;
+            padding: 0;
+            position: relative;
+    
+            a {
+                padding: 15px 30px;
+        
+                .nav-logo{
+                position: absolute;
+                top: 0;
+                margin-top: 5px;
+                }
+            }
+    
+            ul {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                height: 500px;
+                background: $dark-gray;
+                box-shadow: 0px 4px 4px 0px $primary-color;
+                transform: translateX(100%);
+                opacity: 0;
+                transition: .3s;
+        
+                li {
+                    width: 40%;
+                    height: 50px;
+                    @include flex-center;
+            
+                    a {
+                        width: 100%;
+                        height: auto;
+                        text-align: center;
+                        padding: 0;
+                    }
+                }
+            }
+        
+            .open {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        
+            .burger {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin-top: 5px;
+                color: $primary-color;
+
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

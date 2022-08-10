@@ -1,0 +1,139 @@
+.services {
+    width: 100%;
+    height: 592px;
+    position: relative;
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+  
+    .services-wrap {
+      width: 100%;
+      max-width: 960px;
+  
+      .services-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 65px;
+  
+        h2 {
+          font-size: 36px;
+          font-weight: 600;
+          color: #212121;
+        }
+  
+        hr {
+          width: 64px;
+          border: 1px solid $primary-color;
+          margin: 21px 0;
+        }
+  
+        p {
+          font-size: 14px;
+          color: $paragraph-gray;
+        }
+      }
+  
+      .services-bottom {
+        width: 100%;
+        height: 194px;
+        display: flex;
+        gap: 97px;
+  
+        .services-content {
+          width: 100%;
+          display: grid;
+          grid-template-rows: 50px 1fr 58px;
+          justify-items: center;
+  
+          .icon-box {
+            grid-row: 1/2;
+            width: 50px;
+            border: 1px solid $primary-color;
+            border-radius: 50px;
+            @include flex-center;
+  
+            i {
+              color: $primary-color;
+              font-size: 22px;
+            }
+          }
+  
+          h3 {
+            grid-row: 2/3;
+            font-size: 20px;
+            color: $mid-gray;
+            font-weight: normal;
+            margin-top: 35px;
+            margin-bottom: 27px;
+          }
+  
+          p {
+            grid-row: 3/4;
+            font-size: 14px;
+            color: $paragraph-gray;
+            text-align: center;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+
+  //   Media Queries
+@media (max-width: 1150px ) {
+
+    .services-wrap {
+        @include desktopPadding;
+    }
+}
+
+@media (max-width: 978px ) {
+
+    .services {
+        height: 450px;
+    
+        .services-wrap {
+          width: 100%;
+          max-width: 960px;
+    
+          .services-top {
+            margin-bottom: 40px;
+    
+            h2 {
+              font-size: 24px;
+            }
+    
+            hr {
+              margin: 14px 0;
+            }
+          }
+    
+          .services-bottom {
+            gap: 40px;
+    
+            .services-content {
+              grid-template-rows: 50px 1fr 1fr;
+    
+              h3 {
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 12px;
+              }
+    
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+}
+
+@media (max-width: 768px) {
+
+    .services {
+        display: none;
+      }
+}
+

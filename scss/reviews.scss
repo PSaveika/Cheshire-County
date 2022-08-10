@@ -1,0 +1,223 @@
+.reviews {
+    height: 591px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .reviews-wrap {
+      height: 100%;
+      width: 100%;
+      max-width: 1128px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      h2 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 60px;
+      }
+  
+      hr {
+        width: 64px;
+        background: none;
+        border: 1px solid $light-blue;
+        margin-top: 31px;
+        margin-bottom: 58px;
+      }
+  
+      .swiper {
+        width: 100%;
+        max-width: 1057px;
+        height: 340px;
+  
+        .swiper-wrapper {
+          height: 236px;
+  
+          .swiper-slide {
+            width: 273px;
+            display: grid;
+            grid-template-rows: 1fr 9px 70px;
+            align-content: flex-end;
+  
+            .chat-bubble-wrap {
+              grid-row: 1/2;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              margin-bottom: 7px;
+            }
+  
+            .chat-bubble {
+              background: $light-blue;
+              border-radius: 8px;
+            
+              p {
+                color: $white-color;
+                padding: 20px 21px 20px 22px;
+                font-size: 16px;
+                line-height: 1.4;
+              }
+            }
+  
+            .chat-bubble:before {
+              content: "";
+              width: 0px;
+              height: 0px;
+              position: absolute;
+              border: 14px solid transparent;
+              border-top-color: $light-blue;
+              left: 22px;
+              bottom: 27%;
+            }
+  
+            .space {
+              grid-row: 2/3;
+            }
+  
+            .person {
+              grid-row: 3/4;
+              display: grid;
+              grid-template-columns: 70px 1fr;
+              grid-template-rows: 1fr 24px 18px 1fr;
+              column-gap: 16px;
+              align-items: center;
+  
+              img {
+                grid-column: 1/2;
+                grid-row: span 4;
+              }
+              
+              h4 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                font-size: 20px;
+                font-weight: normal;
+                color: $mid-gray;
+              }
+  
+              p {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                font-size: 14px;
+                color: $paragraph-gray;
+              }
+            } 
+          }
+        }
+      }
+  
+      .swiper-pagination-bullet {
+        background: transparent;
+        border: 1px solid $primary-color;
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        transition: .3s;
+      }
+  
+      .swiper-pagination-bullet-active {
+        background: $primary-color;
+      }
+    }
+  }
+
+  //   Media Queries
+@media (max-width: 1150px ) {
+
+    .reviews {
+        .reviews-wrap {
+          hr {
+            margin-top: 16px;
+            margin-bottom: 16px;
+          }
+          .swiper {
+            width: 95%;
+            height: 70%;
+    
+            .swiper-wrapper {
+              height: 75%;
+    
+              .swiper-slide {
+                .chat-bubble:before {
+                  bottom: 20%;
+                }
+              }
+            }
+          }
+        }
+      }
+}
+
+@media (max-width: 978px ) {
+
+    .reviews {
+        height: 500px;
+    
+        .reviews-wrap {
+          width: 90%;
+          max-width: 978px;
+    
+          h2 {
+            font-size: 26px;
+            margin-top: 40px;
+          }
+    
+          hr {
+            width: 64px;
+            margin-top: 16px;
+            margin-bottom: 30px;
+          }
+    
+          .swiper {
+            width: 100%;
+            max-width: 978px;
+            height: 340px;
+    
+            .swiper-wrapper {
+              .swiper-slide {
+                .chat-bubble {
+                  p {
+                    padding: 15px;
+                    font-size: 14px;
+                  }
+                }
+    
+                .chat-bubble:before {
+                  bottom: 25%;
+                }
+              }
+            }
+          }
+        }
+      }
+}
+
+@media (max-width: 768px) {
+
+    .reviews {
+        height: auto;
+        padding: 0 20px;
+    
+        .reviews-wrap {
+          width: 100%;
+          max-width: 100%;
+    
+          h2 {
+            font-size: 18px;
+          }
+    
+          hr {
+            width: 64px;
+            margin-bottom: 0;
+          }
+    
+          .swiper {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+}
+
